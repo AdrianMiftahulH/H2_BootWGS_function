@@ -35,20 +35,25 @@ if (!fs.existsSync("./data/contacts.json")) {
     fs.writeFileSync('./data/contacts.json', "[]");
 }
 
+//Buat variabel ask dan function dengan parameter nanya
 const ask = (nanya) => {
+    //Membuat Promise 
     return new Promise((resolve, reject) => {
+        // Menambahkan pertanyaan dengan parameter nanya dan membuat f dengan parameter jawaban
         rl.question(nanya, (jawaban) => {
+            // Bila Promisenya resolve akan mengambil parameter jawaban
             resolve(jawaban);
         });
     });
 };
 
-
-
+// Buat variabel main dengan f async
 const main = async () => {
+    // Menambahkan Variabel sesuai yang ingin di tanyakan
     const nama = await ask("Siapa nama kamu ? ");
     const noTlpn = await ask("No telepon ? ");
-    const email = await ask("Akun email ? ")
+    const email = await ask("Akun email ? ");
+    // Mengeluarkan Output
     console.log(`Hai ${nama}, dengan no telepon ${noTlpn}, dengan email ${email}`);
 
 }
