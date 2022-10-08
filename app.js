@@ -1,24 +1,11 @@
-// ====== catatan ======
-// npm audit fix --force ==> bila ada masalah saat install karena jaringan
-// npm i validator  ==> untuk istall validator
-// npm i -g nodemon ==> Untuk menginstal nodemen tapi tidak secara global
-
-// ====== validator ======
-// const validator = require('validator');
-
-// Untuk ngevalidasi Email 
-// console.log(validator.isEmail('adrian@gmail.com')); 
-
-// Untuk ngevalidasi No telepon. 
-// console.log(validator.isMobilePhone('18965656565', 'id-ID'));
-
-
 // ===== Task 1 =======
+// import data package json
 const readline = require('readline');
 const fs = require('fs');
 const { resolve } = require('path');
 const { rejects } = require('assert');
 
+// membuat object interface
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -59,8 +46,6 @@ const main = async () => {
 }
 
 main();
-
-
 
 // Membuat pertanyaan nama
 // rl.question('what is your name ? ', (name) => {
